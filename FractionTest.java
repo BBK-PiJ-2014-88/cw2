@@ -82,16 +82,21 @@ public class FractionTest {
 			System.out.println("absValue was successful");
 			System.out.println(new Fraction(-3,8).absValue());
 		}
-		if (!new Fraction(4,3).equals(g.divide(z))){
+		if (!new Fraction(4,3).equals(new Fraction(-4,3).absValue())){
 			System.out.println("absValue failed");
 				}
 		else{
 			System.out.println("absValue was successful");
-			System.out.println(g.divide(z));
+			System.out.println(new Fraction(-4,3).absValue());
 		}
 
 
 		//Improved toString method test
+
+		System.out.println(new Fraction(5,1));
+		System.out.println(new Fraction(17,3));
+		System.out.println(new Fraction(19,1));
+
 
     }
     static void test(Fraction f1, Fraction f2, String msg){
