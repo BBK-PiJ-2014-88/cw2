@@ -1,6 +1,4 @@
-/**
- * Created by keith for the second coursework assignment.
- */
+
 public class Fraction {
     private int numerator;
     private int denominator;
