@@ -80,6 +80,23 @@ public class Fraction {
 
 	}
 
+	public Fraction subtract(Fraction other){
+		int numThis = this.getNumerator();
+		int denomThis = this.getDenominator();
+		int numOther = other.getNumerator();
+		int denomOther = other.getDenominator();
+		int lcmOfThese = lcm(denomThis,denomOther);
+		int multiplierThis = lcmOfThese / denomThis;
+		int multiplierOther = lcmOfThese / denomOther;
+		//using the multiplier to convert fraction to subtractable form
+		denomThis = denomThis * multiplierThis;
+		denomOther = denomOther * multiplierOther;
+		numThis = numThis * multiplierThis;
+		numOther = numOther * multiplierOther;
+		int resultNumerator = numThis - numOther;
+		return new Fraction(resultNumerator, denomThis);
+	}
+
 	public int lcm(int a, int b){
 		//a method to find the lowest common multiple of 2 numbers
 		//this is necessary to convert the denominators of 2 fractions to the same
