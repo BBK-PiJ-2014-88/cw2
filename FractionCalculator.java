@@ -30,10 +30,19 @@ public class FractionCalculator{
 		Fraction resultValue = fraction;
 		String textInput = inputString;
 		String operator = "";
+		Fraction operand1 = resultValue;
+		Fraction operand2 = new Fraction(0,1);
 		int position = 0;
 		int position2 = 0;
-		while (position < textInput.length()){
+		while (position2 < textInput.length()){
 
 		}
 	}
+
+	public Fraction convertToFraction(Fraction frac){
+	//If user inputs a number, not in fraction form, this method will return
+	//the number in fraction form
+	}
 }
+
+//will probably need to use if num.getClass() != Fraction, use the method to convert it to a fraction
