@@ -120,17 +120,17 @@ public class Fraction {
 		return lowestMultiple;
 	}
 
-	public int absValue(){
+	public Fraction absValue(){
 		if((this.getNumerator()/this.getDenominator()) < 0){
-			return (this.getNumerator()/this.getDenominator())* -1;
+			return new Fraction(this.getNumerator()*-1,this.getDenominator());
 		}
 		else{
-			return this.getNumerator()/this.getDenominator();
+			return new Fraction(this.getNumerator(),this.getDenominator());
 		}
 	}
 
-	public int negate(){
-		return (this.getNumerator()/this.getDenominator()) * -1;
+	public Fraction negate(){
+		return new Fraction(this.getNumerator()*-1,this.getDenominator());
 	}
 
     private int myGcd(int a, int b) {

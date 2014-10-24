@@ -75,12 +75,19 @@ public class FractionTest {
 
 		//absolute value and negation tests
 
-		if(!new Fraction(3,8).equals(new Fraction(-3,8).absValue())){
+		if (!new Fraction(4,3).equals(new Fraction(4,3).absValue())){
 			System.out.println("absValue failed");
 		}
 		else{
 			System.out.println("absValue was successful");
-			System.out.println(new Fraction(-3,8).absValue());
+			System.out.println(new Fraction(4,3).absValue());
+		}
+		if (!new Fraction(12,5).equals(new Fraction(-12,5).absValue())){
+			System.out.println("absValue failed");
+		}
+		else{
+			System.out.println("absValue was successful");
+			System.out.println(new Fraction(-12,5).absValue());
 		}
 		if (!new Fraction(4,3).equals(new Fraction(-4,3).absValue())){
 			System.out.println("absValue failed");
@@ -89,7 +96,20 @@ public class FractionTest {
 			System.out.println("absValue was successful");
 			System.out.println(new Fraction(-4,3).absValue());
 		}
-
+		if (!new Fraction(5,3).equals(new Fraction(-5,3).negate())){
+			System.out.println("negate failed");
+		}
+		else{
+			System.out.println("negate was successful");
+			System.out.println(new Fraction(-5,3).negate());
+		}
+		if (!new Fraction(-21,6).equals(new Fraction(21,6).negate())){
+			System.out.println("negate failed");
+		}
+		else{
+			System.out.println("negate was successful");
+			System.out.println(new Fraction(21,6).negate());
+		}
 
 		//Improved toString method test
 
