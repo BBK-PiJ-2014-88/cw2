@@ -69,6 +69,16 @@ public class Fraction {
 		int denomThis = this.getDenominator();
 		int numOther = other.getNumerator();
 		int denomOther = other.getDenominator();
+		int lcmOfThese = lcm(denomThis,denomOther);
+		int multiplierThis = lcmOfThese / denomThis;
+		int multiplierOther = lcmOfThese / denomOther;
+		//using the multiplier to convert fraction to addable form
+		denomThis = denomThis * multiplierThis;
+		denomOther = denomOther * multiplierOther;
+		numThis = numThis * multiplierThis;
+		numOther = numOther * multiplierOther;
+		int resultNumerator = numThis + numOther;
+		return new Fraction(resultNumerator, denomThis);
 
 	}
 
@@ -76,8 +86,12 @@ public class Fraction {
 		//a method to find the lowest common multiple of 2 numbers
 		//this is necessary to convert the denominators of 2 fractions to the same
 		//number so they can be added or subtracted
-		int[] lcmArray1 = new int[];
-		int[] lcmArray2 = new int[];
+		//formula for the lcm of numbers A and B is
+		//(A*B)/gcd(A,B)
+		int abNumerator = a*b;
+		int gcd = myGcd(a,b);
+		int lowestMultiple = abNumerator / gcd;
+		return lowestMultiple;
 	}
 
     private int myGcd(int a, int b) {
