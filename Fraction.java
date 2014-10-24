@@ -97,6 +97,10 @@ public class Fraction {
 		return new Fraction(resultNumerator, denomThis);
 	}
 
+	public Fraction divide(Fraction other){
+
+	}
+
 	public int lcm(int a, int b){
 		//a method to find the lowest common multiple of 2 numbers
 		//this is necessary to convert the denominators of 2 fractions to the same

@@ -38,6 +38,23 @@ public class FractionTest {
 			System.out.println(z.add(k));
 		}
 
+		// subtraction tests
+
+		if(!new Fraction(-1,10).equals(g.subtract(h))){
+			System.out.println("Subtraction failed");
+		}
+		else{
+			System.out.println("Subtraction was successful");
+			System.out.println(g.subtract(h));
+		}
+		if (!new Fraction(37,90).equals(t.subtract(k))){
+			System.out.println("Subtraction failed");
+		}
+		else{
+			System.out.println("Subtraction was successful");
+			System.out.println(t.subtract(k));
+		}
+
     }
     static void test(Fraction f1, Fraction f2, String msg){
 				if (! f1.equals(f2)){
