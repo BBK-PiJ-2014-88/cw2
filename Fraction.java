@@ -16,7 +16,12 @@ public class Fraction {
 
     @Override
     public String toString() {
-        return "" + getNumerator() + '/' + getDenominator();
+		if(this.getDenominator() == 1){
+			return "" + getNumerator();
+		}
+        else{
+			return "" + getNumerator() + '/' + getDenominator();
+		}
     }
 
     public int getNumerator() {
@@ -98,7 +103,9 @@ public class Fraction {
 	}
 
 	public Fraction divide(Fraction other){
-
+		int num = this.getNumerator() * other.getDenominator();
+		int denom = this.getDenominator() * other.getNumerator();
+		return new Fraction(num,denom);
 	}
 
 	public int lcm(int a, int b){
@@ -111,6 +118,20 @@ public class Fraction {
 		int gcd = myGcd(a,b);
 		int lowestMultiple = abNumerator / gcd;
 		return lowestMultiple;
+	}
+
+	public int absValue(){
+		if((this.getNumerator()/this.getDenominator()) < 0){
+			return (this.getNumerator()/this.getDenominator())* -1;
+		}
+		else{
+			return this.getNumerator()/this.getDenominator();
+		}
+	}
+
+	public int negate(){
+		return (this.getNumerator()/this.getDenominator()) * -1;
+
 	}
 
     private int myGcd(int a, int b) {

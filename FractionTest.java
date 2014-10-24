@@ -55,6 +55,44 @@ public class FractionTest {
 			System.out.println(t.subtract(k));
 		}
 
+		//division tests
+
+		if(!new Fraction(3,8).equals(f.divide(t))){
+			System.out.println("Division failed");
+		}
+		else{
+			System.out.println("Division was successful");
+			System.out.println(f.divide(t));
+		}
+		if (!new Fraction(4,3).equals(g.divide(z))){
+			System.out.println("Division failed");
+		}
+		else{
+			System.out.println("Division was successful");
+			System.out.println(g.divide(z));
+		}
+
+
+		//absolute value and negation tests
+
+		if(!new Fraction(3,8).equals(new Fraction(-3,8).absValue())){
+			System.out.println("absValue failed");
+		}
+		else{
+			System.out.println("absValue was successful");
+			System.out.println(new Fraction(-3,8).absValue());
+		}
+		if (!new Fraction(4,3).equals(g.divide(z))){
+			System.out.println("absValue failed");
+				}
+		else{
+			System.out.println("absValue was successful");
+			System.out.println(g.divide(z));
+		}
+
+
+		//Improved toString method test
+
     }
     static void test(Fraction f1, Fraction f2, String msg){
 				if (! f1.equals(f2)){
