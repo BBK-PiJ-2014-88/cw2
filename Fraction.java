@@ -131,7 +131,6 @@ public class Fraction {
 
 	public int negate(){
 		return (this.getNumerator()/this.getDenominator()) * -1;
-
 	}
 
     private int myGcd(int a, int b) {

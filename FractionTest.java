@@ -84,7 +84,7 @@ public class FractionTest {
 		}
 		if (!new Fraction(4,3).equals(new Fraction(-4,3).absValue())){
 			System.out.println("absValue failed");
-				}
+		}
 		else{
 			System.out.println("absValue was successful");
 			System.out.println(new Fraction(-4,3).absValue());
