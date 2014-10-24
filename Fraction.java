@@ -7,7 +7,7 @@ public class Fraction {
 
     public Fraction(int num, int denom) {
         if (denom == 0) {
-            System.out.println("Invalid fraction with denominator 0"); 
+            System.out.println("Invalid fraction with denominator 0");
 	    // this should use exceptions
             return;
         }
@@ -63,6 +63,22 @@ public class Fraction {
         int denom = this.getDenominator() * other.getDenominator();
         return new Fraction(num, denom);
     }
+
+    public Fraction add(Fraction other){
+		int numThis = this.getNumerator();
+		int denomThis = this.getDenominator();
+		int numOther = other.getNumerator();
+		int denomOther = other.getDenominator();
+
+	}
+
+	public int lcm(int a, int b){
+		//a method to find the lowest common multiple of 2 numbers
+		//this is necessary to convert the denominators of 2 fractions to the same
+		//number so they can be added or subtracted
+		int[] lcmArray1 = new int[];
+		int[] lcmArray2 = new int[];
+	}
 
     private int myGcd(int a, int b) {
         while (b != 0) {
