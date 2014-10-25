@@ -1,7 +1,9 @@
 public class FractionCalculator{
+	public static Fraction initialValue = new Fraction(0,1); //this is equivalent to 0
 	public static void main(String[] args){
 		FractionCalculator FractionCalc = new FractionCalculator();
 		FractionCalc.launch();
+
 	}
 	public void launch(){
 	    System.out.println("Hello my name is Sergio Lamela");
@@ -16,7 +18,7 @@ public class FractionCalculator{
 		//evaluating the user's line of input. The initialValue fraction will become
 		//the final output of the previous iteration.
 
-		Fraction initialValue = new Fraction(0,1); //this is equivalent to 0
+
 		boolean carryOn = true;
 		String userInput = "";
 
@@ -66,7 +68,11 @@ public class FractionCalculator{
 						System.out.println("Error: You have inserted 2 operators in a row");
 						System.out.println("The calculator will now reset");
 						position2 = textInput.length() + 1;
+						initialValue = new Fraction(0,1);
 						break;
+					}
+					else{
+						operator = unitOfText;
 					}
 
 				}
@@ -77,6 +83,7 @@ public class FractionCalculator{
 		}
 		System.out.println("Result of calculating line of input: " + resultValue);
 		System.out.println(unitOfText);
+		initialValue = resultValue;
 	}
 
 
