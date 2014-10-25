@@ -23,6 +23,7 @@ public class FractionCalculator{
 		String userInput = "";
 
 		do{
+			System.out.println("Calculator initial value: " + initialValue);
 			System.out.println("Enter line of input: ");
 		    userInput = System.console().readLine();
 			evaluate(initialValue, userInput);
@@ -74,8 +75,21 @@ public class FractionCalculator{
 					else{
 						operator = unitOfText;
 					}
-
 				}
+				else if(unitOfText.equals("a") || unitOfText.equals("A")||
+				unitOfText.equals("abs")){
+					resultValue = resultValue.absValue();
+				}
+				else if (unitOfText.equals("n") || unitOfText.equals("N")||
+				unitOfText.equals("neg")){
+					resultValue = resultValue.negate();
+				}
+				else if (unitOfText.equals("c") || unitOfText.equals("C")||
+				unitOfText.equals("clears")){
+					resultValue = new Fraction(0,1);
+				}
+
+
 
 			}
 
