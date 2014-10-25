@@ -29,11 +29,13 @@ public class FractionCalculator{
 	public void evaluate(Fraction fraction, String inputString){
 		Fraction resultValue = fraction;
 		String textInput = inputString;
+
 		String operator = "";
-		Fraction operand1 = resultValue;
-		Fraction operand2 = new Fraction(0,1);
+		String operand1 = "";
+		String operand2 = "";
+
 		int position = 0;
-		int position2 = 0;
+		int position2 = 1;
 		while (position2 < textInput.length()){
 
 		}
