@@ -160,16 +160,18 @@ public class FractionCalculator{
 		//this method checks the text represents a valid number or fraction.
 		//All characters must be either numbers or '/' or will return false
 		for (int y =0; y < str.length(); y++){
-			if(!(str.substring(y,y+1).equals("0"))|| !(str.substring(y,y+1).equals("1"))
-			||!(str.substring(y,y+1).equals("2"))||!(str.substring(y,y+1).equals("3"))
-			||!(str.substring(y,y+1).equals("4"))||!(str.substring(y,y+1).equals("5"))
-			||!(str.substring(y,y+1).equals("6"))||!(str.substring(y,y+1).equals("7"))
-			||!(str.substring(y,y+1).equals("8"))||!(str.substring(y,y+1).equals("9"))
-			||!(str.substring(y,y+1).equals("/"))){
-				return false;
+			if(str.substring(y,y+1).equals("0")||str.substring(y,y+1).equals("1")
+			||str.substring(y,y+1).equals("2")||str.substring(y,y+1).equals("3")
+			||str.substring(y,y+1).equals("4")||str.substring(y,y+1).equals("5")
+			||str.substring(y,y+1).equals("6")||str.substring(y,y+1).equals("7")
+			||str.substring(y,y+1).equals("8")||str.substring(y,y+1).equals("9")
+			||str.substring(y,y+1).equals("/")){
+				System.out.println("true");
+				return true;
 			}
 		}
-		return true;
+		System.out.println("false");
+		return false;
 	}
 }
 
