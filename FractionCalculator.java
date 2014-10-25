@@ -18,12 +18,13 @@ public class FractionCalculator{
 
 		Fraction initialValue = new Fraction(0,1); //this is equivalent to 0
 		boolean carryOn = true;
+		String userInput = "";
 
 		do{
 			System.out.println("Enter line of input: ");
-			String userInput = System.console().readLine();
+		    userInput = System.console().readLine();
 			evaluate(initialValue, userInput);
-		}while (carryOn == true);
+		}while (!(userInput.equals("q")) ||!(userInput.equals("Q"))||!(userInput.equals("quit")));
 
 	}
 
@@ -65,6 +66,7 @@ public class FractionCalculator{
 		}
 		System.out.println("Result of calculating line of input: " + resultValue);
 	}
+
 
 	public Fraction convertToFraction(String numStr){
 		//This method converts the numbers the user has entered into fractions to be used
