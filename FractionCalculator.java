@@ -94,7 +94,7 @@ public class FractionCalculator{
 						System.out.println("Error: Invalid Input");
 						System.out.println("Restarting Calculator");
 						position2 = textInput.length() + 1;
-						initialValue = new Fraction(0,1);
+						resultValue = new Fraction(0,1);
 						break;
 					}
 					else{
