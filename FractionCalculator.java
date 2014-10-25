@@ -2,7 +2,6 @@ public class FractionCalculator{
 	public static void main(String[] args){
 		FractionCalculator FractionCalc = new FractionCalculator();
 		FractionCalc.launch();
-		boolean carryOn == true;
 	}
 	public void launch(){
 	    System.out.println("Hello my name is Sergio Lamela");
@@ -18,6 +17,7 @@ public class FractionCalculator{
 		//the final output of the previous iteration.
 
 		Fraction initialValue = new Fraction(0,1); //this is equivalent to 0
+		boolean carryOn = true;
 
 		do{
 			System.out.println("Enter line of input: ");
@@ -54,11 +54,11 @@ public class FractionCalculator{
 			}
 			if(checkUnit == true){
 				if(unitOfText.equals("q") || unitOfText.equals("Q") || unitOfText.equals("quit")){
-					carryOn = false;
-					initialValue = new Fraction(0,1);
 					System.out.println("You have exited the program. Goodbye");
+					System.exit(0);
 					break;
 				}
+
 			}
 
 
@@ -69,8 +69,21 @@ public class FractionCalculator{
 	public Fraction convertToFraction(String numStr){
 	//This method converts the numbers the user has entered into fractions to be used
 	//in the evaluate method
+		String strToConvert = numStr;
+		boolean inFractionForm = false;
 		int operand1 = 0;
 		int operand2 = 0;
+		for (int x = 0; x < numStr.length(); x++){
+			if (strToConvert.charAt(x).equals("/"))
+				operand1 = Integer.parseInt(strToConvert.substring(0,x));
+				operand2 = Integer.parseInt(strToConvert.substring(x+1,strToConvert.length()));
+				inFractionForm = true;
+				return new Fraction(operand1, operand2);
+		}
+		if(inFractionForm == false){
+			operand1 = Integer.parseInt(strToConvert);
+			return new Fraction(operand1,1);
+		}
 	}
 }
 
