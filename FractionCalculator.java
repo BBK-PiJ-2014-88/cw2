@@ -30,7 +30,8 @@ public class FractionCalculator{
 
 	public void evaluate(Fraction fraction, String inputString){
 		Fraction resultValue = fraction;
-		String textInput = inputString;
+		String textInput = inputString + "  "; //add 2 spaces at the end so last value in input is not ignored
+		System.out.println(inputString);
 
 		String unitOfText = ""; //temporary holder for unit(operator or fraction) entered by user
 		String operator = "";
@@ -58,6 +59,16 @@ public class FractionCalculator{
 					System.out.println("You have exited the program. Goodbye");
 					System.exit(0);
 					break;
+				}
+				else if(unitOfText.equals("+") || unitOfText.equals("-") ||
+				unitOfText.equals("*") || unitOfText.equals("/")){
+					if(!(operator.equals(""))){
+						System.out.println("Error: You have inserted 2 operators in a row");
+						System.out.println("The calculator will now reset");
+						position2 = textInput.length() + 1;
+						break;
+					}
+
 				}
 
 			}
