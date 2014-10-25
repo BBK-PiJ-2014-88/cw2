@@ -44,7 +44,6 @@ public class FractionCalculator{
 		int position2 = 1;
 
 		while (position2 < textInput.length()){
-			System.out.println("unitoftext: " + unitOfText);
 			boolean checkUnit = false;
 			if (textInput.substring(position, position2).equals(" ")){
 				unitOfText = textInput.substring(startOfUnit, position);
@@ -87,7 +86,7 @@ public class FractionCalculator{
 					resultValue = resultValue.negate();
 				}
 				else if (unitOfText.equals("c") || unitOfText.equals("C")||
-				unitOfText.equals("clears")){
+				unitOfText.equals("clear")){
 					resultValue = new Fraction(0,1);
 				}
 				else{
@@ -166,11 +165,9 @@ public class FractionCalculator{
 			||str.substring(y,y+1).equals("6")||str.substring(y,y+1).equals("7")
 			||str.substring(y,y+1).equals("8")||str.substring(y,y+1).equals("9")
 			||str.substring(y,y+1).equals("/")){
-				System.out.println("true");
 				return true;
 			}
 		}
-		System.out.println("false");
 		return false;
 	}
 }
