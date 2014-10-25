@@ -165,7 +165,7 @@ public class FractionCalculator{
 			||str.substring(y,y+1).equals("4")||str.substring(y,y+1).equals("5")
 			||str.substring(y,y+1).equals("6")||str.substring(y,y+1).equals("7")
 			||str.substring(y,y+1).equals("8")||str.substring(y,y+1).equals("9")
-			||str.substring(y,y+1).equals("/"))){
+			||str.substring(y,y+1).equals("-")||str.substring(y,y+1).equals("/"))){
 				isValid = false;
 			}
 		}
