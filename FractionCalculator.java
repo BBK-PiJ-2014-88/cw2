@@ -24,7 +24,7 @@ public class FractionCalculator{
 			System.out.println("Enter line of input: ");
 		    userInput = System.console().readLine();
 			evaluate(initialValue, userInput);
-		}while (!(userInput.equals("q")) ||!(userInput.equals("Q"))||!(userInput.equals("quit")));
+		}while (!(userInput.equals("q")) && !(userInput.equals("Q")) && !(userInput.equals("quit")));
 
 	}
 
@@ -65,6 +65,7 @@ public class FractionCalculator{
 
 		}
 		System.out.println("Result of calculating line of input: " + resultValue);
+		System.out.println(unitOfText);
 	}
 
 
