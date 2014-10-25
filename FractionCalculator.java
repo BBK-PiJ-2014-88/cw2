@@ -67,23 +67,23 @@ public class FractionCalculator{
 	}
 
 	public Fraction convertToFraction(String numStr){
-	//This method converts the numbers the user has entered into fractions to be used
-	//in the evaluate method
+		//This method converts the numbers the user has entered into fractions to be used
+		//in the evaluate method
 		String strToConvert = numStr;
-		boolean inFractionForm = false;
 		int operand1 = 0;
 		int operand2 = 0;
 		for (int x = 0; x < numStr.length(); x++){
-			if (strToConvert.charAt(x).equals("/"))
+			if (strToConvert.substring(x,x+1).equals("/")){
 				operand1 = Integer.parseInt(strToConvert.substring(0,x));
 				operand2 = Integer.parseInt(strToConvert.substring(x+1,strToConvert.length()));
-				inFractionForm = true;
 				return new Fraction(operand1, operand2);
-		}
-		if(inFractionForm == false){
-			operand1 = Integer.parseInt(strToConvert);
-			return new Fraction(operand1,1);
-		}
+			}
+	    }
+		//if program goes through the program without returning this means there is no "/"
+		//and the input is simply a whole number so need to return as a fraction of number/1
+		operand1 = Integer.parseInt(strToConvert);
+		return new Fraction(operand1,1);
+
 	}
 }
 
