@@ -17,12 +17,13 @@ public class FractionCalculator{
 		//the final output of the previous iteration.
 
 		Fraction initialValue = new Fraction(0,1); //this is equivalent to 0
+		boolean carryOn = true;
 
 		do{
 			System.out.println("Enter line of input: ");
 			String userInput = System.console().readLine();
 			evaluate(initialValue, userInput);
-		}while (System.console().readLine() != "q" || System.console().readLine() != "Q");
+		}while (carryOn == true);
 
 	}
 
@@ -31,19 +32,31 @@ public class FractionCalculator{
 		String textInput = inputString;
 
 		String operator = "";
-		String operand1 = "";
+		String unitOfText = "";
 		String operand2 = "";
 
+		int startOfUnit = 0;
 		int position = 0;
 		int position2 = 1;
 		while (position2 < textInput.length()){
+			if (textInput.substring(position, position2).equals(" "){
+				unitOfText = textInput.substring(startOfUnit, position2);
+				position = position2;
+				position++;
+				position2++;
+			}
+			else{
+				position++;
+				position2++;
+			}
+
 
 		}
 	}
 
 	public Fraction convertToFraction(Fraction frac){
-	//If user inputs a number, not in fraction form, this method will return
-	//the number in fraction form
+	//This method converts the numbers the user has entered into fractions to be used
+	//in the evaluate method
 	}
 }
 
