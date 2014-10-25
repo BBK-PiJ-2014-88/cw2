@@ -57,6 +57,8 @@ public class FractionCalculator{
 				position++;
 				position2++;
 			}
+			//obtained a significant unit of text, not will check what it is i.e. operator or number
+
 			if(checkUnit == true){
 				if(unitOfText.equals("q") || unitOfText.equals("Q") || unitOfText.equals("quit")){
 					System.out.println("You have exited the program. Goodbye");
@@ -88,9 +90,43 @@ public class FractionCalculator{
 				unitOfText.equals("clears")){
 					resultValue = new Fraction(0,1);
 				}
+				else{
+					if (isValidStr(unitOfText) == false){
+						System.out.println("Error: Invalid Input");
+						System.out.println("Restarting Calculator");
+						position2 = textInput.length() + 1;
+						initialValue = new Fraction(0,1);
+						break;
+					}
+					else{
+						operand2 = convertToFraction(unitOfText);
+						if(operator.equals("")){
+							resultValue = operand2;
+							operand2 = new Fraction(0,1);
+						}
+						else if (operator.equals("+")){
+							resultValue = resultValue.add(operand2);
+							operand2 = new Fraction(0,1);
+							operator = "";
+						}
+						else if (operator.equals("-")){
+							resultValue = resultValue.subtract(operand2);
+							operand2 = new Fraction(0,1);
+							operator = "";
+						}
+						else if (operator.equals("*")){
+							resultValue = resultValue.multiply(operand2);
+							operand2 = new Fraction(0,1);
+							operator = "";
+						}
+						else if (operator.equals("/")){
+							resultValue = resultValue.divide(operand2);
+							operand2 = new Fraction(0,1);
+							operator = "";
+						}
+					}
 
-
-
+				}
 			}
 
 
