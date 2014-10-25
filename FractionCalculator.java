@@ -40,8 +40,8 @@ public class FractionCalculator{
 		int position2 = 1;
 		while (position2 < textInput.length()){
 			if (textInput.substring(position, position2).equals(" "){
-				unitOfText = textInput.substring(startOfUnit, position2);
-				position = position2;
+				unitOfText = textInput.substring(startOfUnit, position);
+				startOfUnit = position2;
 				position++;
 				position2++;
 			}
