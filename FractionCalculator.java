@@ -34,7 +34,6 @@ public class FractionCalculator{
 	public void evaluate(Fraction fraction, String inputString){
 		Fraction resultValue = fraction;
 		String textInput = inputString + "  "; //add 2 spaces at the end so last value in input is not ignored
-		System.out.println(inputString);
 
 		String unitOfText = ""; //temporary holder for unit(operator or fraction) entered by user
 		String operator = "";
@@ -45,6 +44,7 @@ public class FractionCalculator{
 		int position2 = 1;
 
 		while (position2 < textInput.length()){
+			System.out.println("unitoftext: " + unitOfText);
 			boolean checkUnit = false;
 			if (textInput.substring(position, position2).equals(" ")){
 				unitOfText = textInput.substring(startOfUnit, position);
@@ -57,7 +57,7 @@ public class FractionCalculator{
 				position++;
 				position2++;
 			}
-			//obtained a significant unit of text, not will check what it is i.e. operator or number
+			//obtained a significant unit of text, now will check what it is i.e. operator or fraction
 
 			if(checkUnit == true){
 				if(unitOfText.equals("q") || unitOfText.equals("Q") || unitOfText.equals("quit")){
@@ -132,7 +132,6 @@ public class FractionCalculator{
 
 		}
 		System.out.println("Result of calculating line of input: " + resultValue);
-		System.out.println(unitOfText);
 		initialValue = resultValue;
 	}
 
