@@ -1,5 +1,6 @@
 public class FractionCalculator{
-	public static Fraction initialValue = new Fraction(0,1); //this is equivalent to 0
+	public Fraction initialValue = new Fraction(0,1); //this is equivalent to 0
+	String operator = "";
 	public static void main(String[] args){
 		FractionCalculator FractionCalc = new FractionCalculator();
 		FractionCalc.launch();
@@ -36,7 +37,7 @@ public class FractionCalculator{
 		String textInput = inputString + "  "; //add 2 spaces at the end so last value in input is not ignored
 
 		String unitOfText = ""; //temporary holder for unit(operator or fraction) entered by user
-		String operator = "";
+
 		Fraction operand2 = new Fraction(0,1);
 
 		int startOfUnit = 0;
@@ -69,6 +70,7 @@ public class FractionCalculator{
 					if(!(operator.equals(""))){
 						System.out.println("Error: You have inserted 2 operators in a row");
 						System.out.println("The calculator will now reset");
+						operator = "";
 						position2 = textInput.length() + 1;
 						initialValue = new Fraction(0,1);
 						break;
@@ -95,6 +97,7 @@ public class FractionCalculator{
 						System.out.println("Restarting Calculator");
 						position2 = textInput.length() + 1;
 						resultValue = new Fraction(0,1);
+						operator = "";
 						break;
 					}
 					else{
@@ -130,7 +133,7 @@ public class FractionCalculator{
 
 
 		}
-		System.out.println("Result of calculating line of input: " + resultValue);
+		System.out.println("Result of evaluating line of input: " + resultValue);
 		initialValue = resultValue;
 	}
 
@@ -173,4 +176,3 @@ public class FractionCalculator{
 	}
 }
 
-//will probably need to use if num.getClass() != Fraction, use the method to convert it to a fraction
