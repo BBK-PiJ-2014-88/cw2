@@ -72,72 +72,72 @@ public class FractionCalculatorTest{
 		//absolute value, negative and clear test, alone and in combination with
 		//other operations
 
-		System.out.println(testerCalculator.evaluate(fractionA, "7 / 5"));
-		if(testerCalculator.initialValue.equals(new Fraction(7,5))){
+		System.out.println(testerCalculator.evaluate(fractionA, "2 - 3 abs + 4"));
+		if(testerCalculator.initialValue.equals(new Fraction(5,1))){
 			System.out.println("test successful");
 		}
 		else{
 			System.out.println("test failed");
 		}
 
-		System.out.println(testerCalculator.evaluate(fractionA, "7 / 5"));
-		if(testerCalculator.initialValue.equals(new Fraction(7,5))){
+		System.out.println(testerCalculator.evaluate(fractionA, "2 + 3 - 10 A"));
+		if(testerCalculator.initialValue.equals(new Fraction(5,1))){
 			System.out.println("test successful");
 		}
 		else{
 			System.out.println("test failed");
 		}
 
-		System.out.println(testerCalculator.evaluate(fractionA, "7 / 5"));
-		if(testerCalculator.initialValue.equals(new Fraction(7,5))){
+		System.out.println(testerCalculator.evaluate(fractionA, "-3 a + 2"));
+		if(testerCalculator.initialValue.equals(new Fraction(5,1))){
 			System.out.println("test successful");
 		}
 		else{
 			System.out.println("test failed");
 		}
 
-		System.out.println(testerCalculator.evaluate(fractionA, "7 / 5"));
-		if(testerCalculator.initialValue.equals(new Fraction(7,5))){
+		System.out.println(testerCalculator.evaluate(fractionA, "2 neg - 3"));
+		if(testerCalculator.initialValue.equals(new Fraction(-5,1))){
 			System.out.println("test successful");
 		}
 		else{
 			System.out.println("test failed");
 		}
 
-		System.out.println(testerCalculator.evaluate(fractionA, "7 / 5"));
-		if(testerCalculator.initialValue.equals(new Fraction(7,5))){
+		System.out.println(testerCalculator.evaluate(fractionA, "3/1 - 6 N + 3"));
+		if(testerCalculator.initialValue.equals(new Fraction(6,1))){
 			System.out.println("test successful");
 		}
 		else{
 			System.out.println("test failed");
 		}
 
-		System.out.println(testerCalculator.evaluate(fractionA, "7 / 5"));
-		if(testerCalculator.initialValue.equals(new Fraction(7,5))){
+		System.out.println(testerCalculator.evaluate(fractionA, "4 n"));
+		if(testerCalculator.initialValue.equals(new Fraction(-4,1))){
 			System.out.println("test successful");
 		}
 		else{
 			System.out.println("test failed");
 		}
 
-		System.out.println(testerCalculator.evaluate(fractionA, "7 / 5"));
-		if(testerCalculator.initialValue.equals(new Fraction(7,5))){
+		System.out.println(testerCalculator.evaluate(fractionA, "5 + 2 clear 3"));
+		if(testerCalculator.initialValue.equals(new Fraction(3,1))){
 			System.out.println("test successful");
 		}
 		else{
 			System.out.println("test failed");
 		}
 
-		System.out.println(testerCalculator.evaluate(fractionA, "7 / 5"));
-		if(testerCalculator.initialValue.equals(new Fraction(7,5))){
+		System.out.println(testerCalculator.evaluate(fractionA, "4 * 1/2 C 1 + 1"));
+		if(testerCalculator.initialValue.equals(new Fraction(2,1))){
 			System.out.println("test successful");
 		}
 		else{
 			System.out.println("test failed");
 		}
 
-		System.out.println(testerCalculator.evaluate(fractionA, "7 / 5"));
-		if(testerCalculator.initialValue.equals(new Fraction(7,5))){
+		System.out.println(testerCalculator.evaluate(fractionA, "4 5 c 6"));
+		if(testerCalculator.initialValue.equals(new Fraction(6,1))){
 			System.out.println("test successful");
 		}
 		else{
