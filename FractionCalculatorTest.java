@@ -13,16 +13,40 @@ public class FractionCalculatorTest{
 			System.out.println("test failed");
 		}
 		//subtraction test
-		System.out.println(testerCalculator.evaluate(fractionA, "6 - 2"));
+		System.out.println(testerCalculator.evaluate(fractionA, "6/1 - 2"));
 		if(testerCalculator.initialValue.equals(new Fraction(4,1))){
 			System.out.println("test successful");
 		}
 		else{
 			System.out.println("test failed");
 		}
+
+		System.out.println(testerCalculator.evaluate(fractionA, "4/2 - 7/1"));
+		if(testerCalculator.initialValue.equals(new Fraction(-5,1))){
+			System.out.println("test successful");
+		}
+		else{
+			System.out.println("test failed");
+		}
 		//multiplication test
-		System.out.println(testerCalculator.evaluate(fractionA, "3/2 * 7/4"));
-		if(testerCalculator.initialValue.equals(new Fraction(13,4))){
+		System.out.println(testerCalculator.evaluate(fractionA, "1/2 * 1/4"));
+		if(testerCalculator.initialValue.equals(new Fraction(1,8))){
+			System.out.println("test successful");
+		}
+		else{
+			System.out.println("test failed");
+		}
+
+		System.out.println(testerCalculator.evaluate(fractionA, "17/5 * 31/2"));
+		if(testerCalculator.initialValue.equals(new Fraction(527,10))){
+			System.out.println("test successful");
+		}
+		else{
+			System.out.println("test failed");
+		}
+		//subtraction test
+		System.out.println(testerCalculator.evaluate(fractionA, "6 - 2"));
+		if(testerCalculator.initialValue.equals(new Fraction(4,1))){
 			System.out.println("test successful");
 		}
 		else{
