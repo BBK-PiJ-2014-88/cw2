@@ -24,7 +24,9 @@ public class FractionCalculator{
 		String userInput = "";
 
 		do{
-			System.out.println("Calculator initial value: " + initialValue);
+			System.out.println();
+			System.out.println("Current value in Calculator: " + initialValue);
+			System.out.println("Current operator in Calculator: " + operator);
 			System.out.println("Enter line of input: ");
 		    userInput = System.console().readLine();
 			evaluate(initialValue, userInput);
@@ -32,7 +34,7 @@ public class FractionCalculator{
 
 	}
 
-	public void evaluate(Fraction fraction, String inputString){
+	public Fraction evaluate(Fraction fraction, String inputString){
 		Fraction resultValue = fraction;
 		String textInput = inputString + "  "; //add 2 spaces at the end so last value in input is not ignored
 
@@ -72,7 +74,7 @@ public class FractionCalculator{
 						System.out.println("The calculator will now reset");
 						operator = "";
 						position2 = textInput.length() + 1;
-						initialValue = new Fraction(0,1);
+						resultValue = new Fraction(0,1);
 						break;
 					}
 					else{
@@ -135,6 +137,7 @@ public class FractionCalculator{
 		}
 		System.out.println("Result of evaluating line of input: " + resultValue);
 		initialValue = resultValue;
+		return resultValue;
 	}
 
 
