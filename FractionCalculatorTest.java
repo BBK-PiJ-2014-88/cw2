@@ -1,3 +1,4 @@
+//Completed Version
 public class FractionCalculatorTest{
 	public static void main(String[] args){
 		//check that Calculator can carry out the 4 main operators with some or several
@@ -70,7 +71,7 @@ public class FractionCalculatorTest{
 		}
 
 		//absolute value, negative and clear test, alone and in combination with
-		//other operations
+		//other operations. Try all possibilities a,A,abs,n,N,neg,c,C,clear
 
 		System.out.println(testerCalculator.evaluate(fractionA, "2 - 3 abs + 4"));
 		if(testerCalculator.initialValue.equals(new Fraction(5,1))){
@@ -144,6 +145,35 @@ public class FractionCalculatorTest{
 			System.out.println("test failed");
 		}
 
+		//check that quit works and that an error message is printed when an error occurs
+		//when an error occurs the value of initialValue should be 0 as it is reset after errors
+
+		System.out.println("Should print an error message: ");
+		System.out.println(testerCalculator.evaluate(fractionA, "5 + 3?"));
+		if(testerCalculator.initialValue.equals(new Fraction(0,1))){
+			System.out.println("test successful");
+		}
+		else{
+			System.out.println("test failed");
+		}
+
+		System.out.println("Should print an error message: ");
+		System.out.println(testerCalculator.evaluate(fractionA, "5 + + +"));
+		if(testerCalculator.initialValue.equals(new Fraction(0,1))){
+			System.out.println("test successful");
+		}
+		else{
+			System.out.println("test failed");
+		}
+
+		System.out.println("Checking that program will quit");
+		System.out.println(testerCalculator.evaluate(fractionA, "3 + 5 q"));
+
+		System.out.println("Checking that program will quit Test2");
+		System.out.println(testerCalculator.evaluate(fractionA, "3 + 5 - 4 q 5"));
+
+		System.out.println("Checking that program will quit Test2");
+		System.out.println(testerCalculator.evaluate(fractionA, "7/3 + 1 Q 5"));
 
 	}
 }

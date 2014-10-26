@@ -1,3 +1,4 @@
+//Completed Version
 public class FractionCalculator{
 	public Fraction initialValue = new Fraction(0,1); //this is equivalent to 0
 	String operator = "";
