@@ -1,5 +1,0 @@
-@ECHO OFF
-H:
-CD "\cw2"
-"C:\Program Files\Java\jdk1.8.0_20\bin\java.exe" FractionTest
-PAUSE
