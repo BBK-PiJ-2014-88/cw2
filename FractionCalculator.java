@@ -21,7 +21,7 @@ public class FractionCalculator{
 		//the final output of the previous iteration.
 
 
-		boolean carryOn = true;
+		
 		String userInput = "";
 
 		do{
@@ -146,19 +146,19 @@ public class FractionCalculator{
 		//This method converts the numbers the user has entered into fractions to be used
 		//in the evaluate method
 		String strToConvert = numStr;
-		int operand1 = 0;
-		int operand2 = 0;
+		int numerator = 0;
+		int denominator = 0;
 		for (int x = 0; x < numStr.length(); x++){
 			if (strToConvert.substring(x,x+1).equals("/")){
-				operand1 = Integer.parseInt(strToConvert.substring(0,x));
-				operand2 = Integer.parseInt(strToConvert.substring(x+1,strToConvert.length()));
-				return new Fraction(operand1, operand2);
+				numerator = Integer.parseInt(strToConvert.substring(0,x));
+				denominator = Integer.parseInt(strToConvert.substring(x+1,strToConvert.length()));
+				return new Fraction(numerator, denominator);
 			}
 	    }
 		//if program goes through the program without returning this means there is no "/"
 		//and the input is simply a whole number so need to return as a fraction of number/1
-		operand1 = Integer.parseInt(strToConvert);
-		return new Fraction(operand1,1);
+		numerator = Integer.parseInt(strToConvert);
+		return new Fraction(numerator,1);
 
 	}
 
